@@ -1,0 +1,22 @@
+{
+  "name": "nexora",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anantoniuk/nexora.git"
+  },
+  "author": "Antoniuk Anna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anantoniuk/nexora/issues"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  }
+}
