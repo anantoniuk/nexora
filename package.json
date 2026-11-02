@@ -18,5 +18,8 @@
   },
   "devDependencies": {
     "parcel": "^2.16.4"
+  },
+  "overrides": {
+    "@swc/core": "1.15.33"
   }
 }
