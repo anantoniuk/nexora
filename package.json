@@ -17,7 +17,9 @@
     "url": "https://github.com/anantoniuk/nexora/issues"
   },
   "devDependencies": {
-    "parcel": "^2.16.4"
+    "modern-normalize": "^3.0.1",
+    "parcel": "^2.16.4",
+    "posthtml-include": "^2.0.1"
   },
   "overrides": {
     "@swc/core": "1.15.33"

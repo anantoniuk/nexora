@@ -1,0 +1,14 @@
+:root {
+  /* Кольори */
+  --color-bg: #07060d;
+  --color-bg-second: rgba(21, 17, 29, 0.9);
+  --color-border: hsla(0, 0%, 100%, 0.1);
+  --color-text-primary: #f6f3fc;
+  --color-text-second: #9b91ab;
+  --color-purple-light: #ac5ef2;
+  --color-white-elemets: #ffffff;
+  --color-black-text: #140d19;
+
+  /* Шрифт */
+  --font-main: "Inter", sans-serif;
+}
