@@ -1,0 +1,93 @@
+.footer {
+    background-color: #0C0911;
+    overflow-x: clip;
+}
+
+.footer__top {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    padding: 58px 0 58px 0;
+    position: relative;
+}
+
+.footer__top::before,
+.footer__top::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 100vw;
+    height: 1px;
+    background-color: #211B29;
+    transform: translateX(-50%);
+
+}
+
+.footer__top::before {
+    top: 0;
+}
+
+.footer__top::after {
+    bottom: 0;
+}
+
+.footer__info {
+    max-width: 264px;
+    max-height: 112px;
+    transform: translateY(-40px)
+}
+
+.footer__info-logo {
+    width: 128px;
+    height: auto;
+}
+
+.footer__info-text {
+    line-height: 1.6;
+}
+
+.footer__nav,
+.footer__support,
+.footer__documents {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 264px;
+    height: 114px;
+}
+
+.footer__nav-list,
+.footer__support-list,
+.footer__documents-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer__nav-title,
+.footer__support-title,
+.footer__documents-title {
+    font-weight: 600;
+    color: #F6F3FC;
+}
+
+.footer__info-text,
+.footer__nav-link,
+.footer__support-item p,
+.footer__documents-link {
+    color: var(--color-text-second);
+}
+
+.footer__copyright,
+.footer__made-in-ukraine {
+    font-size: 12px;
+    color: #5E536C
+}
+
+.footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 26px 0 26px 0;
+}
