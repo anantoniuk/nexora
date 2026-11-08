@@ -1,12 +1,10 @@
-.container {
-  height: 768px;
-  width: 1061px;
-  margin: 0 auto;
+.categgory__container {
+  padding: 120px 0 40px;
 }
 .currency-container {
   display: flex;
   flex-direction: row;
-  gap: 15px;
+  gap: 25px;
   width: 100%;
 }
 .title-container {
