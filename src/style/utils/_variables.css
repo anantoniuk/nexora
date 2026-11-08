@@ -8,7 +8,11 @@
   --color-purple-light: #ac5ef2;
   --color-white-elemets: #ffffff;
   --color-black-text: #140d19;
-
+  --color-card-bg: #15111d;
+  --color-second-border: #2c2635;
+  --button-color: #2b2234;
+  --button-hover: #982cf0;
   /* Шрифт */
   --font-main: "Inter", sans-serif;
+  --font-second: "Arimo", sans-serif;
 }
