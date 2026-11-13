@@ -23,7 +23,11 @@ const renderCategories = async () => {
       );
 
       const type = className.replace("category--", "");
-      const typeAliases = { texts: "text" };
+      const typeAliases = {
+        texts: "text",
+        coding: "programming",
+        sound: "audio_music"
+      };
 
       const itemType = typeAliases[type] || type;
       const count = data.filter(
