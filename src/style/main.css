@@ -5,4 +5,5 @@
 @import "./components/_container.css";
 @import "./components/_header.css";
 @import "./components/_hero.css";
-@import "./components/_currency-categories.css";
+@import "./components/_categories.css";
+@import "./components/_footer.css";
