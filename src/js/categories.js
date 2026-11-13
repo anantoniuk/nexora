@@ -34,8 +34,16 @@ const renderCategories = async () => {
         (item) => item.type?.toLowerCase() === itemType,
       ).length;
 
-      const label = card.querySelector(`.instrument-count`);
-      label.textContent = count;
+      const pluralRules = new Intl.PluralRules("uk-UA", { type: "ordinal" }) // MDN JavaScript Reference;
+      const toolCountForms = {
+        one: "інструмент",
+        few: "інструменти",
+        many: "інструментів",
+        other: "інструментів"
+      }
+
+      const label = card.querySelector(`.category__bottom-instruments`);
+      label.textContent = `${count} ${toolCountForms[pluralRules.select(count)]}`
     });
   } catch (e) {
     console.error(e);
