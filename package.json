@@ -23,5 +23,8 @@
   },
   "overrides": {
     "@swc/core": "1.15.33"
+  },
+  "dependencies": {
+    "handlebars": "^4.7.10"
   }
 }
