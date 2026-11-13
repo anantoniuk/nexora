@@ -23,15 +23,27 @@ const renderCategories = async () => {
       );
 
       const type = className.replace("category--", "");
-      const typeAliases = { texts: "text" };
+      const typeAliases = {
+        texts: "text",
+        coding: "programming",
+        sound: "audio_music"
+      };
 
       const itemType = typeAliases[type] || type;
       const count = data.filter(
         (item) => item.type?.toLowerCase() === itemType,
       ).length;
 
-      const label = card.querySelector(`.instrument-count`);
-      label.textContent = count;
+      const pluralRules = new Intl.PluralRules("uk-UA", { type: "ordinal" }) // MDN JavaScript Reference;
+      const toolCountForms = {
+        one: "інструмент",
+        few: "інструменти",
+        many: "інструментів",
+        other: "інструментів"
+      }
+
+      const label = card.querySelector(`.category__bottom-instruments`);
+      label.textContent = `${count} ${toolCountForms[pluralRules.select(count)]}`
     });
   } catch (e) {
     console.error(e);
