@@ -1,0 +1,152 @@
+.categories {
+  padding: 80px 0;
+}
+
+.categories__pre-title {
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+  color: var(--color-purple-light);
+}
+
+.categories__title {
+  font-weight: 600;
+  font-size: 48px;
+  letter-spacing: -2.2px;
+  line-height: 1.2;
+  color: var(--color-text-primary);
+  margin: 13px 0 10px 0;
+}
+
+.categories__subtitle {
+  font-size: 18px;
+  color: var(--color-text-second);
+}
+
+.categories__list {
+  margin-top: 39px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.categories__item {
+  padding: 20px;
+  border: 1px solid #2b2435;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #1d1528 0%, #14101c 100%);
+  transition:
+    transform 200ms ease,
+    border-color 200ms ease,
+    box-shadow 200ms ease;
+}
+
+.categories__item:hover {
+  transform: translateY(-4px) scale(1.05);
+  border-color: #6f4a8d;
+  box-shadow: 0px 12px 32px rgb(0 0 0 / 0.2);
+}
+
+.category__wrap {
+  padding: 15px;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+}
+
+.category--design .category__wrap {
+  background: linear-gradient(135deg, #af59f7 0%, #7121d4 100%);
+}
+
+.category--animation .category__wrap {
+  background: linear-gradient(135deg, #ee4c9c 0%, #9933df 100%);
+}
+
+.category--video .category__wrap {
+  background: linear-gradient(135deg, #8c5af4 0%, #4e3be9 100%);
+}
+
+.category--texts .category__wrap {
+  background: linear-gradient(135deg, #c38aff 0%, #8236f1 100%);
+}
+
+.category--coding .category__wrap {
+  background: linear-gradient(135deg, #6861f0 0%, #7735eb 100%);
+}
+
+.category--sound .category__wrap {
+  background: linear-gradient(135deg, #d346ec 0%, #8a17ca 100%);
+}
+
+.category--marketing .category__wrap {
+  background: linear-gradient(135deg, #b25be9 0%, #dd308d 100%);
+}
+
+.category--productivity .category__wrap {
+  background: linear-gradient(135deg, #dd308d 0%, #4930cf 100%);
+}
+
+.category__wrap-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.category__top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 52px;
+}
+
+.category__top-count {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10px;
+  color: #55445f;
+}
+
+.category__middle-name {
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: -0.7px;
+  color: var(--color-text-primary);
+}
+
+.category__middle-desc {
+  line-height: 1.65;
+  color: var(--color-text-second);
+}
+
+.category__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.category__bottom-instruments {
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: var(--color-purple-light);
+}
+
+.category__bottom-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 10px;
+  border: 1px solid #2b2435;
+  border-radius: 50%;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: transform 200ms ease, border-color 200ms ease, background-color 200ms ease;
+}
+
+.category__bottom-next:hover {
+  transform: translateY(-2px);
+  background-color: var(--color-purple-light);
+}
