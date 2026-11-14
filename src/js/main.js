@@ -1,2 +1,3 @@
 // тут будуть іпорти
-import './categories';
+import "./burger-menu";
+import "./categories";

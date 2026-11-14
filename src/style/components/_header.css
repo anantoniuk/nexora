@@ -44,20 +44,121 @@
 }
 
 .header__btn--save {
-  width: 40px;
-  height: 40px;
+  padding: 10px 12px;
   background-color: var(--color-bg-second);
-  /* background-image: ; */
   border: 1px solid var(--color-border);
   border-radius: 50%;
+}
+.header__icon {
+  width: 16px;
+  height: 16px;
+  fill: var(--color-white-elemets);
 }
 
 .header__btn--login {
   height: 40px;
   padding: 0 16px;
   background-color: var(--color-white-elemets);
-  /* background-image:; */
   color: var(--color-black-text);
   border-radius: 99px;
   font-weight: 700;
+}
+.header__icon--login {
+  margin-right: 8px;
+}
+/* ---- */
+.header__burger {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .header__burger {
+    display: block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-bg-second);
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+  }
+
+  .header__burger span,
+  .header__burger span::before,
+  .header__burger span::after {
+    position: absolute;
+    left: 50%;
+    width: 16px;
+    height: 2px;
+    margin-left: -8px;
+    background: var(--color-white-elemets);
+    transition: transform 0.2s ease;
+  }
+
+  .header__burger span {
+    top: 50%;
+    margin-top: -1px;
+  }
+
+  .header__burger span::before,
+  .header__burger span::after {
+    content: "";
+  }
+
+  .header__burger span::before {
+    top: -5px;
+  }
+
+  .header__burger span::after {
+    top: 5px;
+  }
+
+  .header__burger--active span {
+    background: transparent;
+  }
+
+  .header__burger--active span::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  .header__burger--active span::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 8px 16px 16px;
+    background: hsla(260, 30%, 4%, 0.9);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .nav--open {
+    display: block;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nav__link {
+    display: block;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    width: 104px;
+  }
+
+  .header__btn--login {
+    padding: 0 12px;
+  }
 }
