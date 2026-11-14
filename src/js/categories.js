@@ -1,0 +1,53 @@
+const fetchAPI = async (
+  BASE_URL = "https://6af04bd311a6aa866e7f3459.mockapi.io/tools/",
+) => {
+  const res = await fetch(BASE_URL);
+  if (!res.ok)
+    throw new Error(
+      `Не вдалося отримати дані з ${BASE_URL}, статус: ${res.status}`,
+    );
+  return res.json();
+};
+
+const categoriesList = document.querySelector(`.categories__list`);
+
+const renderCategories = async () => {
+  if (!categoriesList) return;
+
+  try {
+    const data = await fetchAPI();
+    const categories = [...categoriesList.querySelectorAll(`.category`)];
+    categories.map(async (card) => {
+      const className = [...card.classList].find((name) =>
+        name.startsWith("category--"),
+      );
+
+      const type = className.replace("category--", "");
+      const typeAliases = {
+        texts: "text",
+        coding: "programming",
+        sound: "audio_music"
+      };
+
+      const itemType = typeAliases[type] || type;
+      const count = data.filter(
+        (item) => item.type?.toLowerCase() === itemType,
+      ).length;
+
+      const pluralRules = new Intl.PluralRules("uk-UA", { type: "ordinal" }) // MDN JavaScript Reference;
+      const toolCountForms = {
+        one: "інструмент",
+        few: "інструменти",
+        many: "інструментів",
+        other: "інструментів"
+      }
+
+      const label = card.querySelector(`.category__bottom-instruments`);
+      label.textContent = `${count} ${toolCountForms[pluralRules.select(count)]}`
+    });
+  } catch (e) {
+    console.error(e);
+  }
+};
+
+renderCategories();

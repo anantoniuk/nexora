@@ -2,5 +2,7 @@
 @import "./utils/_variables.css";
 @import "./global/_reset.css";
 @import "./global/_global.css";
-@import "../style/components/_header.css";
+@import "./components/_container.css";
+@import "./components/_header.css";
 @import "./components/_currency-categories.css";
+@import "./components/_footer.css";
