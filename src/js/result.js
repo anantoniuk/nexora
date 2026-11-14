@@ -8,3 +8,4 @@ export function renderCards(data) {
   const markup = compiledTemplate(data);
   result.innerHTML = markup;
 }
+//
