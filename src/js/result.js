@@ -2,10 +2,9 @@ import resultTemplate from "bundle-text:../partials/templates/result.hbs";
 import Handlebars from "handlebars";
 
 const result = document.querySelector(".result-container");
+const compiledTemplate = Handlebars.compile(resultTemplate);
 
-function renderCards(data) {
-  const markup = resultTemplate(data);
+export function renderCards(data) {
+  const markup = compiledTemplate(data);
   result.innerHTML = markup;
 }
-
-renderCards();
