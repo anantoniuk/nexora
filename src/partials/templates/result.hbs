@@ -1,23 +1,21 @@
-<ul class="result-list">
-  {{#each this}}
-    <li class="result-card" data-id="{{id}}">
-      <div class="result-card-container">
-        <img class="result-card__logo" src="{{logo}}" alt="logo" />
-        <button class="result-card__favorite">
-          <img src="../../img/fav.png" alt="favorite" />
-        </button>
-      </div>
-      <div class="result-card__body">
-        <h3 class="result-card__title">{{name}}</h3>
-        <p class="result-card__description">{{description}}</p>
-      </div>
-      <div class="result-card__footer">
-        <span class="result-card__currency-category">{{currency}}</span>
-        <a class="result-card__more" href="{{ai-url}}">
-          Докладніше
-        </a>
-        <img src="../../img/arrow.png" alt="arrow" />
-      </div>
-    </li>
-  {{/each}}
-</ul>
+{{#each tools}}
+  <li class="result-card" data-id="{{id}}">
+    <div class="result-card-container">
+      <a href="{{url}}"><img class="result-card__logo" src="{{logo}}" alt="logo" /></a>
+      <button class="result-card__favorite" type="button">
+        <img class="result-card__favorite-icon" src="{{../favIcon}}" alt="favorite" />
+      </button>
+    </div>
+    <div class="result-card__body">
+      <h3 class="result-card__title">{{name}}</h3>
+      <p class="result-card__description">{{description}}</p>
+    </div>
+    <div class="result-card__footer">
+      <span class="result-card__currency-category">{{pricing}}</span>
+      <a class="result-card__more" href="{{url}}" target="_blank">
+        Докладніше
+        <img class="result-card__more-icon" src="{{../arrowIcon}}" alt="arrow" />
+      </a>
+    </div>
+  </li>
+{{/each}}

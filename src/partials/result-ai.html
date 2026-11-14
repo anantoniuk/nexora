@@ -1,14 +1,23 @@
 <div class="container result-container">
-  <h1 class="result-title">Ваші AI-інструменти</h1>
-  <p class="result-subtitle">
-    Добірка сервісів для категорії «Дизайн» з форматом доступу «З лімітом».
-  </p>
-  <label for="result-search-input">
-    <input
-      id="result-search-input"
-      class="result-search-input"
-      type="text"
-      placeholder="Пошук у результатах"
-    />
-  </label>
+  <div class="result-header-container">
+    <div class="result-text-wrapper">
+      <h1 class="result-title">Ваші AI-інструменти</h1>
+      <p class="result-subtitle">
+        Добірка сервісів для категорії «Дизайн» з форматом доступу «З лімітом».
+      </p>
+    </div>
+
+    <label class="result-search-label" for="result-search-input">
+      <svg class="result-search-icon" width="14" height="14">
+        <use href="./img/symbol-defs.svg#icon-search"></use>
+      </svg>
+      <input
+        id="result-search-input"
+        class="result-search-input"
+        type="text"
+        placeholder="Пошук у результатах"
+      />
+    </label>
+  </div>
+  <ul class="result-list"></ul>
 </div>

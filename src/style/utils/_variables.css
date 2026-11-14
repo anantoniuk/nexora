@@ -7,14 +7,16 @@
   --color-text-second: #9b91ab;
   --color-purple-light: #ac5ef2;
   --color-white-elemets: #ffffff;
+  --favorite-color: #6900bf;
   --color-black-text: #140d19;
   --color-card-bg: #15111d;
-
+  --color-card-bg-hover: #21132e;
   --color-second-border: #2c2635;
   --button-color: #2b2234;
   --button-hover: #982cf0;
   --color-bg-third: #271d32;
   --color-hover-border: #8700f6;
+
   /* Шрифт */
   --font-main: "Inter", sans-serif;
   --font-second: "Arimo", sans-serif;
