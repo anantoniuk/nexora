@@ -8,4 +8,4 @@ function renderCards(data) {
   result.innerHTML = markup;
 }
 
-renderCards(filteredTools);
+renderCards();
