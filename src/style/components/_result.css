@@ -1,0 +1,107 @@
+.result-title {
+  font-family: var(--font-second);
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 130%;
+  letter-spacing: -0.04em;
+  color: var(--color-white-elemets);
+}
+.result-subtitle {
+  font-family: var(--font-second);
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--color-text-second);
+}
+.result-search-input {
+  border: 1px solid var(--color-second-border);
+  border-radius: 9px;
+  padding: 0 13px;
+  width: 247px;
+  height: 36px;
+  background-color: var(--color-card-bg);
+}
+.result-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.result-card {
+  border: 1px solid var(--color-second-border);
+  border-radius: 20px;
+  width: 286px;
+  height: 248px;
+  background-color: var(--color-card-bg);
+  padding: 16px 16px 16px 17px;
+}
+.result-card:hover {
+  border: 1px solid var(--color-hover-border);
+  background-color: var(--color-card-bg);
+}
+.result-card-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.result-card__logo {
+  border-radius: 12px;
+  width: 42px;
+  height: 42px;
+}
+
+.result-card__favorite {
+  border: 1px solid var(--color-second-border);
+  border-radius: 100px;
+  width: 30px;
+  height: 30px;
+  transition: border 0.4s ease;
+}
+.result-card__favorite:hover {
+  border: 1px solid var(--color-hover-border);
+}
+.result-card__body {
+  margin-top: 24px;
+  margin-bottom: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-card__title {
+  font-family: var(--font-second);
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: -0.02em;
+  color: var(--color-white-elemets);
+}
+
+.result-card__description {
+  font-family: var(--font-second);
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 160%;
+  color: var(--color-text-second);
+}
+
+.result-card__footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.result-card__currency-category {
+  border-radius: 6px;
+  padding: 0 8px;
+  width: 54px;
+  height: 22px;
+  background: var(--color-bg-third);
+}
+
+.result-card__more {
+  font-family: var(--font-second);
+  font-weight: 700;
+  font-size: 10px;
+  color: var(--color-purple-light);
+}
