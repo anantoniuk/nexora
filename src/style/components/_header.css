@@ -53,6 +53,9 @@
   width: 16px;
   height: 16px;
   fill: var(--color-white-elemets);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header__btn--login {
@@ -65,6 +68,7 @@
 }
 .header__icon--login {
   margin-right: 8px;
+  display: inline-block;
 }
 /* ---- */
 .header__burger {
