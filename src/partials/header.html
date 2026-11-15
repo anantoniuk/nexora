@@ -20,8 +20,20 @@
     </nav>
 
     <div class="header__actions">
-      <button class="header__btn--save"></button>
-      <button class="header__btn--login">Увійти</button>
+      <button class="header__btn--save">
+        <svg class="header__icon header__icon--save">
+          <use href="#icon-bookmark"></use>
+        </svg>
+      </button>
+      <button class="header__btn--login">
+        <svg class="header__icon header__icon--login">
+          <use href="#icon-user"></use>
+        </svg>
+        Увійти
+      </button>
+      <button class="header__burger" aria-label="Меню" aria-expanded="false">
+        <span></span>
+      </button>
     </div>
   </div>
 </header>
