@@ -142,12 +142,31 @@
   border-radius: 50%;
   color: var(--color-text-primary);
   text-decoration: none;
-  transition: transform 200ms ease, border-color 200ms ease, background-color 200ms ease;
+  transition:
+    transform 200ms ease,
+    border-color 200ms ease,
+    background-color 200ms ease;
 }
 
 .category__bottom-next:hover {
   transform: translateY(-2px);
   background-color: var(--color-purple-light);
+}
+
+.categories__item--hidden {
+  display: none;
+}
+
+.categories__empty {
+  display: none;
+  margin: 0 auto;
+  width: fit-content;
+  color: var(--color-text-second);
+  border-bottom: solid 1px var(--color-text-second);
+}
+
+.categories__empty--visible {
+  display: block;
 }
 
 @media (max-width: 768px) {
