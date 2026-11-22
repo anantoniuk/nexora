@@ -132,6 +132,7 @@
 }
 
 .category__bottom-next {
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -140,6 +141,7 @@
   padding: 10px;
   border: 1px solid #2b2435;
   border-radius: 50%;
+  background: transparent;
   color: var(--color-text-primary);
   text-decoration: none;
   transition:

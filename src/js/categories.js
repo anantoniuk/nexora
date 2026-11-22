@@ -51,3 +51,18 @@ const renderCategories = async () => {
 };
 
 renderCategories();
+
+const categoriestList = document.querySelectorAll(`.categories__list`);
+
+categoriesList.addEventListener(`click`, (e) => {
+  const link = e.target.closest(`[data-category]`);
+
+  if (!link) return;
+
+  e.preventDefault();
+
+  const url = new URL(link.href);
+  url.searchParams.set("category", link.dataset.category);
+
+  window.location.href = url.href;
+})
