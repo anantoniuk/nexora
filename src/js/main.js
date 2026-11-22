@@ -1,5 +1,4 @@
-// тут будуть іпорти
-import "./result.js";
+import "./burger-menu";
+import "./header-modal";
+import "./hero-search";
 import "./categories";
-import "./currency-categories.js";
-import "./result-search.js";

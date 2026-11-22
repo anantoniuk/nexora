@@ -18,6 +18,9 @@
   --color-hover-border: #8700f6;
   --color-heart: #786b87;
   --color-heart-hover: #a281be;
+  --color-tag-bg: #2a2740;
+  --color-tag-border: #3d3a56;
+  --color-tag-text: #c4b5fd;
 
   /* Шрифт */
   --font-main: "Inter", sans-serif;

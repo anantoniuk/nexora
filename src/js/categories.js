@@ -26,7 +26,7 @@ const renderCategories = async () => {
       const typeAliases = {
         texts: "text",
         coding: "programming",
-        sound: "audio_music"
+        sound: "audio_music",
       };
 
       const itemType = typeAliases[type] || type;
@@ -34,16 +34,16 @@ const renderCategories = async () => {
         (item) => item.type?.toLowerCase() === itemType,
       ).length;
 
-      const pluralRules = new Intl.PluralRules("uk-UA", { type: "ordinal" }) // MDN JavaScript Reference;
+      const pluralRules = new Intl.PluralRules("uk-UA", { type: "ordinal" }); // MDN JavaScript Reference;
       const toolCountForms = {
         one: "інструмент",
         few: "інструменти",
         many: "інструментів",
-        other: "інструментів"
-      }
+        other: "інструментів",
+      };
 
       const label = card.querySelector(`.category__bottom-instruments`);
-      label.textContent = `${count} ${toolCountForms[pluralRules.select(count)]}`
+      label.textContent = `${count} ${toolCountForms[pluralRules.select(count)]}`;
     });
   } catch (e) {
     console.error(e);
@@ -51,3 +51,18 @@ const renderCategories = async () => {
 };
 
 renderCategories();
+
+const categoriestList = document.querySelectorAll(`.categories__list`);
+
+categoriesList.addEventListener(`click`, (e) => {
+  const link = e.target.closest(`[data-category]`);
+
+  if (!link) return;
+
+  e.preventDefault();
+
+  const url = new URL(link.href);
+  url.searchParams.set("category", link.dataset.category);
+
+  window.location.href = url.href;
+})
