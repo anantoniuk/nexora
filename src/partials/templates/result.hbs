@@ -3,7 +3,10 @@
     <div class="result-card-container">
       <a href="{{url}}"><img class="result-card__logo" src="{{logo}}" alt="logo" /></a>
       <button class="result-card__favorite" type="button">
-        <img class="result-card__favorite-icon" src="{{../favIcon}}" alt="favorite" />
+  <svg class="result-card__favorite-icon" width="20" height="20">
+    <use href="#icon-heart"></use>
+  </svg>
+
       </button>
     </div>
     <div class="result-card__body">
