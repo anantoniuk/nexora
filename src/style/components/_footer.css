@@ -34,12 +34,13 @@
 .footer__info {
   max-width: 264px;
   max-height: 112px;
-  transform: translateY(-40px);
 }
 
 .footer__info-logo {
   width: 128px;
-  height: auto;
+  height: 48px;
+  object-fit: cover;
+  margin-bottom: 20px;
 }
 
 .footer__info-text {
@@ -74,6 +75,7 @@
 .footer__info-text,
 .footer__nav-link,
 .footer__support-item p,
+.footer__support-item a,
 .footer__documents-link {
   color: var(--color-text-second);
 }
