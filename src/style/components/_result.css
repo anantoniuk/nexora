@@ -204,6 +204,7 @@
 }
 .result-card__more {
   font-family: var(--font-second);
+  background-color: transparent;
   font-weight: 700;
   font-size: 17px;
   color: var(--color-purple-light);

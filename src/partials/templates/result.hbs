@@ -15,10 +15,8 @@
     </div>
     <div class="result-card__footer">
       <span class="result-card__currency-category">{{pricing}}</span>
-      <a class="result-card__more" href="{{url}}" target="_blank">
-        Докладніше
-        <img class="result-card__more-icon" src="{{../arrowIcon}}" alt="arrow" />
-      </a>
+      <button class="result-card__more" data-url="{{url}}">Докладніше
+        <img class="result-card__more-icon" src="{{../arrowIcon}}" alt="arrow" ></button>
     </div>
   </li>
 {{/each}}
