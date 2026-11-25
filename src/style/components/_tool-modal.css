@@ -16,14 +16,14 @@
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(5px);
 }
 
 .tool-modal__body {
   position: relative;
   max-width: 420px;
   padding: 28px;
-  background: #1e1b30;
+  background-color: #1e1b30;
   border-radius: 18px;
   display: flex;
   flex-direction: column;
@@ -51,18 +51,12 @@
   transform: scale(1.1);
 }
 
-.tool__icon {
-  width: 20px;
-  height: 20px;
-}
-
 .tool-modal__logo {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 55px;
   height: 55px;
-  background: var(--color-purple-light);
   border-radius: 12px;
   overflow: hidden;
 }
@@ -101,11 +95,19 @@
   color: var(--color-white-elemets);
   background: var(--color-purple-light);
   border-radius: 10px;
-  transition: background-color 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.tool-modal__icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.5s ease;
 }
 
-.tool-modal__link:hover {
-  background-color: var(--color-tag-text);
+.tool-modal__link:hover .tool-modal__icon {
+  transform: translateX(5px);
 }
 
 .tool-modal .is-hidden {
