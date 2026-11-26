@@ -5,6 +5,7 @@
 @import "./components/_container.css";
 @import "./components/_header.css";
 @import "./components/_header-modal.css";
+@import "./components/_filters.css";
 @import "./components/_currency-categories.css";
 @import "./components/_result.css";
 @import "./components/_tool-modal.css";
