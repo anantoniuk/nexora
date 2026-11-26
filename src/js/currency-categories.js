@@ -68,7 +68,8 @@ function priceFilter(price) {
 
       return response.json();
     })
-    .then((allAi) => {
+      .then((allAi) => {
+        const category = url.searchParams.get("category");
       const filteredTools = allAi.filter((ai) => {
         const matchesPrice = !price || ai.pricing === price;
         const matchesCategory =
