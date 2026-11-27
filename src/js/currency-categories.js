@@ -1,4 +1,5 @@
 import { renderCards } from "./result.js";
+import { handleChooseType } from "./current-currency-category";
 
 const freeCard = document.querySelector(".free");
 const limitCard = document.querySelector(".limit");
@@ -21,7 +22,7 @@ export function showAllAi() {
       console.error("Помилка:", error);
     });
 }
-function priceFilter(price) {
+function priceFilter(price, event) {
   if (resultList) {
     resultList.scrollIntoView({ behavior: "smooth" });
   }
@@ -34,14 +35,15 @@ function priceFilter(price) {
     })
     .then((allAi) => {
       const filteredTools = allAi.filter((ai) => ai.pricing === price);
-
+      handleChooseType(event);
       renderCards(filteredTools);
     })
     .catch((error) => {
       console.error("Щось пішло не так:( ", error);
     });
 }
-freeCard.addEventListener("click", () => priceFilter("free"));
-limitCard.addEventListener("click", () => priceFilter("limited"));
-paidCard.addEventListener("click", () => priceFilter("paid"));
+
+freeCard.addEventListener("click", (event) => priceFilter("free", event));
+limitCard.addEventListener("click", (event) => priceFilter("limited", event));
+paidCard.addEventListener("click", (event) => priceFilter("paid", event));
 showAllAi();

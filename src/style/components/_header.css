@@ -33,7 +33,7 @@
 }
 
 .nav__link:hover,
-.nav__link--active {
+.nav__link--current {
   color: var(--color-text-primary);
 }
 
