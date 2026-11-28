@@ -18,7 +18,8 @@ function priceFilter(price) {
     })
     .then((allAi) => {
       const filteredTools = allAi.filter((ai) => ai.pricing === price);
-
+      const resultSubtitle = document.querySelector(".result-subtitle");
+      resultSubtitle.textContent = `Добірка сервісів для категорії «${Дизайн}» з форматом доступу «${price}».`;
       renderCards(filteredTools);
     })
     .catch((error) => {
