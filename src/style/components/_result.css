@@ -72,6 +72,17 @@
   border-color: var(--color-hover-border);
 }
 
+.empty-message {
+  text-align: center;
+  color: #9d91ad;
+  padding: 40px 0;
+  font-size: 16px;
+}
+
+.hidden {
+  display: none;
+}
+
 .result-list {
   display: flex;
   justify-content: center;
