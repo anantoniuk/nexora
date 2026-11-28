@@ -51,7 +51,9 @@ export function showAllAi() {
     });
 }
 
-function priceFilter(price) {
+function priceFilter(price, event) {
+  handleChooseType(event);
+
   const url = new URL(window.location.href);
   url.searchParams.set("price", price);
 
@@ -69,8 +71,8 @@ function priceFilter(price) {
 
       return response.json();
     })
-      .then((allAi) => {
-        const category = url.searchParams.get("category");
+    .then((allAi) => {
+      const category = url.searchParams.get("category");
       const filteredTools = allAi.filter((ai) => {
         const matchesPrice = !price || ai.pricing === price;
         const matchesCategory =
@@ -81,8 +83,6 @@ function priceFilter(price) {
 
         return matchesPrice && matchesCategory;
       });
-
-      co
 
       if (emptyMessage) {
         emptyMessage.classList.toggle("hidden", filteredTools.length > 0);
@@ -95,6 +95,6 @@ function priceFilter(price) {
     });
 }
 
-freeCard.addEventListener("click", () => priceFilter("free"));
-limitCard.addEventListener("click", () => priceFilter("limited"));
-paidCard.addEventListener("click", () => priceFilter("paid"));
+freeCard.addEventListener("click", (event) => priceFilter("free", event));
+limitCard.addEventListener("click", (event) => priceFilter("limited", event));
+paidCard.addEventListener("click", (event) => priceFilter("paid", event));
