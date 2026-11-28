@@ -85,7 +85,7 @@
 
 .result-list {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: stretch;
   flex-wrap: wrap;
   gap: 25px;

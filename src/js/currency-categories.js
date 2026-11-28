@@ -72,22 +72,9 @@ function priceFilter(price, event) {
       return response.json();
     })
     .then((allAi) => {
-      const category = url.searchParams.get("category");
-      const filteredTools = allAi.filter((ai) => {
-        const matchesPrice = !price || ai.pricing === price;
-        const matchesCategory =
-          !category ||
-          category === "all" ||
-          ai.type === category ||
-          ai.type === categoryAliases[category];
-
-        return matchesPrice && matchesCategory;
-      });
-
-      if (emptyMessage) {
-        emptyMessage.classList.toggle("hidden", filteredTools.length > 0);
-      }
-
+      const filteredTools = allAi.filter((ai) => ai.pricing === price);
+      const resultSubtitle = document.querySelector(".result-subtitle");
+      resultSubtitle.textContent = `Добірка сервісів для категорії «${Дизайн}» з форматом доступу «${price}».`;
       renderCards(filteredTools);
     })
     .catch((error) => {
