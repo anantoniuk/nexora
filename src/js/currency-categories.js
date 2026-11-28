@@ -1,6 +1,6 @@
 import { renderCards } from "./result.js";
 import { handleChooseType } from "./current-currency-category";
-
+const categoriesList = document.querySelector(".categories-list");
 const freeCard = document.querySelector(".free");
 const limitCard = document.querySelector(".limit");
 const paidCard = document.querySelector(".paid");
@@ -94,7 +94,65 @@ function priceFilter(price, event) {
       console.error("Помилка:", error);
     });
 }
+const resultSubtitle = document.querySelector(".result-subtitle");
 
-freeCard.addEventListener("click", (event) => priceFilter("free", event));
-limitCard.addEventListener("click", (event) => priceFilter("limited", event));
-paidCard.addEventListener("click", (event) => priceFilter("paid", event));
+resultSubtitle.textContent =
+  "Добірка всіх доступних сервісів штучного інтелекту.";
+const priceLabels = {
+  free: "Безкоштовно",
+  limited: "З лімітом",
+  paid: "Преміум",
+};
+
+function updateSubtitle() {
+  const categoryLabels = {
+    all: "Усі категорії",
+    design: "Дизайн",
+    animation: "Анімація",
+    video: "Відео",
+    audio_music: "Аудіо та музика",
+    sound: "Аудіо та музика",
+    texts: "Тексти",
+    text: "Тексти",
+    coding: "Програмування",
+    programming: "Програмування",
+  };
+  const url = new URL(window.location.href);
+  const category = url.searchParams.get("category");
+  const price = url.searchParams.get("price");
+  const categoryName = categoryLabels[category] || category;
+
+  if (category && category !== "all" && price) {
+    resultSubtitle.textContent = `Добірка сервісів для категорії «${categoryName}» з форматом доступу «${priceLabels[price]}».`;
+  } else if (category && category !== "all") {
+    resultSubtitle.textContent = `Добірка сервісів для категорії «${categoryName}».`;
+  } else if (price) {
+    resultSubtitle.textContent = `Добірка сервісів з форматом доступу «${priceLabels[price]}».`;
+  } else {
+    resultSubtitle.textContent =
+      "Добірка всіх доступних сервісів штучного інтелекту.";
+  }
+}
+
+freeCard.addEventListener("click", (event) => {
+  priceFilter("free", event);
+  updateSubtitle();
+});
+
+limitCard.addEventListener("click", (event) => {
+  priceFilter("limited", event);
+  updateSubtitle();
+});
+
+paidCard.addEventListener("click", (event) => {
+  priceFilter("paid", event);
+  updateSubtitle();
+});
+
+if (categoriesList) {
+  categoriesList.addEventListener("click", () => {
+    setTimeout(updateSubtitle, 0);
+  });
+}
+
+updateSubtitle();

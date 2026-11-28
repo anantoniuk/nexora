@@ -8,12 +8,14 @@
   border-bottom: 1px solid var(--color-border);
   backdrop-filter: blur(10px);
 }
-
+@view-transition {
+  navigation: auto;
+}
 .header__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 86;
+  height: 86px;
   padding: 16px;
 }
 
