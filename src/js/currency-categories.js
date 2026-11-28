@@ -1,4 +1,5 @@
 import { renderCards } from "./result.js";
+import { handleChooseType } from "./current-currency-category";
 
 const freeCard = document.querySelector(".free");
 const limitCard = document.querySelector(".limit");

@@ -135,13 +135,21 @@
   }
 
   .search {
-    height: 56px;
-    gap: 8px;
-    padding: 0 8px 0 16px;
+    height: 112px;
+    gap: 0px;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .search__input {
+    padding-left: 8px;
   }
 
   .search__btn {
     padding: 10px 16px;
+    width: 100%;
     font-size: 14px;
   }
 
