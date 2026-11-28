@@ -27,20 +27,25 @@
   max-width: 420px;
   max-height: 100%;
   padding: 32px;
-  background-color: var(--color-bg);
-  border: 1px solid var(--color-border);
+  background-color: #1e1b30;
   border-radius: 20px;
 }
 
 .modal__close {
   position: absolute;
   top: 12px;
-  right: 16px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
   border-radius: 50px;
   padding: 5px;
-  background-color: rgba(42, 21, 61, 0.8);
-  border: 1px solid rgba(169, 85, 247, 0.2);
-  color: #d1a2fa;
+  background-color: transparent;
+  color: var(--color-text-second);
+  border: 1px solid var(--color-tag-border);
+  background-color: var(--color-tag-bg);
   transition: transform 0.3s ease;
 }
 
@@ -75,7 +80,7 @@
 
 .modal__input {
   padding: 14px 16px;
-  background-color: var(--color-bg);
+  background-color: #1e1b30;
   border: 1px solid var(--color-border);
   color: var(--color-text);
   border-radius: 12px;
@@ -85,6 +90,9 @@
 
 .modal__input:focus {
   border-color: var(--color-purple-light);
+}
+.modal__input::placeholder {
+  color: var(--color-text-second);
 }
 
 .modal__submit {

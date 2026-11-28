@@ -1,21 +1,26 @@
-/* .container-currency-categories {
+.categgory__container {
   width: 100%;
-  max-width: 1440px;
-  margin: 0 auto 100px auto;
-  padding: 0 20px;
+  max-width: 1240px;
+
+  margin-inline: auto;
+  padding-inline: 20px;
   box-sizing: border-box;
-} */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .currency-container {
   display: flex;
   flex-direction: row;
   gap: 30px;
   width: 100%;
+
   justify-content: center;
   flex-wrap: wrap;
   align-items: stretch;
   margin-bottom: 100px;
 }
-
 .title-container {
   margin-top: 170px;
   display: flex;
@@ -29,6 +34,7 @@
   color: var(--color-white-elemets);
   font-family: var(--font-second);
   font-size: 49px;
+
   font-weight: bold;
   line-height: 120%;
   letter-spacing: -2.1px;
@@ -37,7 +43,6 @@
   width: 100%;
   max-width: 882px;
 }
-
 .categgory-subtitle {
   color: var(--color-text-second);
   width: 100%;
@@ -53,13 +58,14 @@
 
 .curency-choice {
   max-width: 400px;
-  min-width: 330px;
+  min-width: 300px;
   border: 1px solid var(--color-second-border);
   border-radius: 20px;
   background-color: var(--color-card-bg);
   flex-basis: calc((100% - 60px) / 3);
   padding: 29px 24px;
   box-sizing: border-box;
+
   display: flex;
   flex-direction: column;
   position: relative;
@@ -68,8 +74,8 @@
     background-color 0.4s ease,
     border 0.4s ease;
 }
-
-.curency-choice:hover {
+.curency-choice:hover,
+.curency-choice-current {
   border: 1px solid #8c44cc;
   background-color: #21132e;
   transform: translateY(-10px);
@@ -85,17 +91,16 @@
   top: 29px;
   left: 24px;
 }
-
 .currency-text {
   font-family: var(--font-main);
   font-weight: 700;
+
   font-size: 23px;
   letter-spacing: -0.03em;
   color: var(--color-white-elemets);
   margin-bottom: 17px;
   margin-top: 41px;
 }
-
 .currency {
   font-family: var(--font-main);
   font-weight: 700;
@@ -113,13 +118,11 @@
   color: var(--color-text-second);
   margin-bottom: 31px;
 }
-
 .adventage {
   width: 18px;
   height: 18px;
   flex-shrink: 0;
 }
-
 .item-text {
   font-family: var(--font-main);
   font-weight: 400;
@@ -137,6 +140,7 @@
   font-size: 13px;
   color: var(--color-white-elemets);
   border-radius: 100px;
+
   padding: 0 13px;
   width: 100px;
   height: 25px;
@@ -145,7 +149,6 @@
   right: 25px;
   top: 25px;
 }
-
 .show-ai-button {
   border-radius: 9px;
   width: 100%;
@@ -159,7 +162,6 @@
   margin-bottom: 10px;
   font-size: 15px;
 }
-
 .show-ai-button:hover {
   background-color: var(--button-hover);
 }
@@ -171,16 +173,105 @@
   padding: 0;
   margin: 10px 0 40px 0;
 }
-
 .info-item {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-
 .item-contaner {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 12px;
+}
+
+@media (max-width: 1100px) {
+  .title-container {
+    margin-top: 120px;
+  }
+  .categgory-title {
+    font-size: 40px;
+    letter-spacing: -1.5px;
+  }
+
+  .currency-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 80px;
+  }
+  .curency-choice {
+    flex-basis: auto;
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .title-container {
+    margin-top: 80px;
+  }
+  .categgory-title {
+    font-size: 32px;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+  }
+  .categgory-subtitle {
+    font-size: 15px;
+    margin-bottom: 36px;
+  }
+
+  .currency-container {
+    gap: 18px;
+    margin-bottom: 60px;
+  }
+  .curency-choice {
+    min-width: unset;
+    max-width: 340px;
+    padding: 20px 18px;
+    border-radius: 16px;
+  }
+  .curency-choice:hover {
+    transform: none;
+  }
+  .user-advice {
+    top: 20px;
+    left: 18px;
+    font-size: 12px;
+  }
+
+  .popular {
+    top: 18px;
+    right: 18px;
+    width: auto;
+    height: 22px;
+    padding: 0 10px;
+    font-size: 11px;
+  }
+  .currency-text {
+    font-size: 19px;
+    margin-top: 32px;
+    margin-bottom: 12px;
+  }
+  .currency {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+  .description {
+    font-size: 14px;
+    margin-bottom: 22px;
+  }
+  .info-list {
+    gap: 8px;
+    margin: 8px 0 28px 0;
+  }
+  .item-text {
+    font-size: 13px;
+  }
+  .show-ai-button {
+    height: 40px;
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
 }
